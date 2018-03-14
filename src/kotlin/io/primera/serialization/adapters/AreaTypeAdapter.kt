@@ -36,7 +36,7 @@ object AreaTypeAdapter : TypeAdapter<Area>() {
                     endArray()
                 }
                 is Area.Polygonal -> {
-                    name("coordinates")
+                    name("vertices")
                     beginArray()
                     area.vertices.forEach { CoordinateTypeAdapter.write(this, it) }
                     endArray()
@@ -67,12 +67,15 @@ object AreaTypeAdapter : TypeAdapter<Area>() {
                     coordinates!!.asJsonArray.map(CoordinateTypeAdapter::fromJson).let(Area::Absolute)
                 }
                 className<Area.Polygonal>() -> {
-                    val (coordinates) = parseElements("coordinates")
+                    val (coordinates) = parseElements("vertices")
                     coordinates!!.asJsonArray.map(CoordinateTypeAdapter::fromJson).let {
                         Area.Polygonal(*it.toTypedArray())
                     }
                 }
-                else -> null
+                else -> {
+                    parseElements()
+                    null
+                }
             }.also {
                 endObject()
             }
