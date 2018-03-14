@@ -10,7 +10,10 @@ import org.junit.Test
 
 class TypeAdapterTests {
     private val gson: Gson = GsonBuilder()
-            .setPrettyPrinting().serializeNulls().registerTypeAdapterFactory(RuneMateTypeAdapterFactory).create()
+            .setPrettyPrinting()
+            .serializeNulls()
+            .registerTypeAdapterFactory(RuneMateTypeAdapterFactory)
+            .create()
 
     @Test
     fun coordinateTest() {
