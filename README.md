@@ -1,8 +1,8 @@
-# RuneMate TypeAdapters
-### Gson TypeAdapters for commonly used RuneMate classes, brought to you by Team Prime
+# [RuneMate](https://www.runemate.com) TypeAdapters
+### Gson TypeAdapters for commonly used [RuneMate](https://www.runemate.com) classes
 
 #### Introduction
-If you want to push your bot architecture a bit further and move your bot data to an external format such as json, you'll soon find out that crucial data types in the RuneMate API cannot be easily serialized and/or deserialized.
+If you want to push your bot architecture a bit further and move your bot data to an external format such as json, you'll soon find out that crucial data types in the [RuneMate API](https://www.runemate.com/developer/jdocs/) cannot be easily serialized and/or deserialized.
 
 In order to encourage bot authors to still migrate their data to an external format, I have written this library to help achieve that goal without everyone wasting lots of time writing their own type adapters for the same purpose.
 
