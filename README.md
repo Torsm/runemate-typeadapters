@@ -25,7 +25,3 @@ val gson = GsonBuilder()
 ```
 Registering the `RuneMateTypeAdapterFactory` will allow Gson to successfully serialize and deserialize any supported types. All you have left to do is let Gson do its magic.
 
-#### Kotlin btw
-As you have probably already noticed, this project is written purely in Kotlin, and when taking a look at the code you'll quickly see why. To further encourage authors to use Kotlin as their main programming language for bots, this project shall be an example for how elegantly many problems can be solved in comparison to the widely used Java.
-
-__Have fun, your friend and helper Savior__
